@@ -1,9 +1,12 @@
 export default function CreateChannelButton() {
   return (
     <div
-      className="flex flex-row w-full h-12 rounded-lg border hover:cursor-pointer transition-all 
-    duration-100 hover:bg-[#333333] border-[#555555] items-center p-2 gap-2"
+      className="flex flex-row w-full justify-between h-12 rounded-lg border hover:cursor-pointer transition-all 
+    duration-100 hover:bg-[#333333] border-[#555555] items-center p-4 text-white"
     >
+      <h1 className="text-lg font-medium select-none h-full flex items-center">
+        Create New Channel
+      </h1>
       <svg
         className="w-6 h-6"
         aria-hidden="true"
@@ -19,8 +22,6 @@ export default function CreateChannelButton() {
           clipRule="evenodd"
         />
       </svg>
-
-      <h1 className="text-lg font-medium select-none">Create Channel</h1>
     </div>
   );
 }

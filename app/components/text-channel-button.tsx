@@ -3,37 +3,27 @@ import Image from "next/image";
 export default function TextChannelButton() {
   return (
     <div
-      className="flex flex-row w-full h-12 rounded-lg border hover:cursor-pointer transition-all 
-    duration-100 hover:bg-[#333333] border-[#555555] items-center p-2 gap-2"
+      className="flex flex-row w-full justify-between h-12 rounded-lg border hover:cursor-pointer transition-all 
+    duration-100 hover:bg-[#333333] border-[#555555] items-center p-4 gap-2 text-white"
     >
-      <div className="h-8 w-8 rounded-full border border-[#555555] justify-center items-center flex overflow-hidden">
-        <Image
-          src="/Chunk.png"
-          alt="Profile Picture"
-          className="w-full h-full object-cover select-none"
-          width={32}
-          height={32}
-          unoptimized
+      <h1 className="text-lg font-medium select-none h-full flex items-center">
+        Name
+      </h1>
+      <svg
+        className="w-6 h-6"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fillRule="evenodd"
+          d="M3 5.983C3 4.888 3.895 4 5 4h14c1.105 0 2 .888 2 1.983v8.923a1.992 1.992 0 0 1-2 1.983h-6.6l-2.867 2.7c-.955.899-2.533.228-2.533-1.08v-1.62H5c-1.105 0-2-.888-2-1.983V5.983Zm5.706 3.809a1 1 0 1 0-1.412 1.417 1 1 0 1 0 1.412-1.417Zm2.585.002a1 1 0 1 1 .003 1.414 1 1 0 0 1-.003-1.414Zm5.415-.002a1 1 0 1 0-1.412 1.417 1 1 0 1 0 1.412-1.417Z"
+          clipRule="evenodd"
         />
-      </div>
-      <h1 className="text-lg font-medium select-none">Text Channel</h1>
-      <div className="ml-auto">
-        <svg
-          className="w-6 h-6"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            fillRule="evenodd"
-            d="M3 5.983C3 4.888 3.895 4 5 4h14c1.105 0 2 .888 2 1.983v8.923a1.992 1.992 0 0 1-2 1.983h-6.6l-2.867 2.7c-.955.899-2.533.228-2.533-1.08v-1.62H5c-1.105 0-2-.888-2-1.983V5.983Zm5.706 3.809a1 1 0 1 0-1.412 1.417 1 1 0 1 0 1.412-1.417Zm2.585.002a1 1 0 1 1 .003 1.414 1 1 0 0 1-.003-1.414Zm5.415-.002a1 1 0 1 0-1.412 1.417 1 1 0 1 0 1.412-1.417Z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </div>
+      </svg>
     </div>
   );
 }

@@ -9,7 +9,7 @@ export default function SignInPage() {
   const [errorMessage, setErrorMessage] = useState("");
 
   return (
-    <div className="flex h-full w-full justify-center items-center bg-[#222222] gap-30">
+    <div className="flex h-full w-full justify-center items-center bg-[#222222] gap-30 text-white">
       <div>
         <h1 className="font-semibold text-4xl">Welcome to</h1>
         <h1 className="font-extrabold text-5xl">Poopcord</h1>
@@ -17,7 +17,7 @@ export default function SignInPage() {
           Sign in or create an account to start chatting.
         </h2>
       </div>
-      <div className="flex flex-col gap-3 bg-[#111111] w-120 justify-center items-center rounded-xl p-5 border-1 border-[#555555] shadow-xl">
+      <div className="flex flex-col gap-3 bg-[#111111] w-120 justify-center items-center rounded-xl p-5 border-[#555555] shadow-xl">
         <div className="flex flex-row gap-3 pb-1">
           <button
             className={`h-15 w-54 rounded-lg text-2xl hover:bg-[#555555] hover:cursor-pointer transition-all duration-200
@@ -80,7 +80,7 @@ export default function SignInPage() {
               {errorMessage.toUpperCase()}
             </div>
             <button
-              className="h-15 w-full rounded-lg text-2xl hover:bg-[#666666] hover:cursor-pointer transition-all duration-200 border-1 border-[#555555]"
+              className="h-15 w-full rounded-lg text-2xl hover:bg-[#666666] hover:cursor-pointer transition-all duration-200 border border-[#555555]"
               type="submit"
             >
               Sign up
@@ -112,7 +112,7 @@ export default function SignInPage() {
               {errorMessage.toUpperCase()}
             </div>
             <button
-              className="h-15 w-full rounded-lg text-2xl hover:bg-[#666666] hover:cursor-pointer transition-all duration-200 border-1 border-[#555555]"
+              className="h-15 w-full rounded-lg text-2xl hover:bg-[#666666] hover:cursor-pointer transition-all duration-200 border border-[#555555]"
               type="submit"
             >
               Sign in

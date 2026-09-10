@@ -2,13 +2,35 @@ import Image from "next/image";
 
 export default function MessageBox() {
   return (
-    <div className="flex flex-row h-15 fixed bottom-3 left-85 right-3 gap-2">
+    <div className="flex flex-row h-15 fixed bottom-3 left-100 right-3 gap-2 text-white">
+      <button
+        className="bg-[#111111] border-b border-r border-[#555555] rounded-xl p-3 min-w-15 h-full flex items-center justify-center
+      hover:bg-[#333333] hover:cursor-pointer transition-all duration-100"
+      >
+        <svg
+          className="w-6 h-6"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M5 12h14m-7 7V5"
+          />
+        </svg>
+      </button>
       <input
-        className="bg-[#111111] border-b border-r border-[#555555] rounded-xl p-3 w-full h-full"
+        className="bg-[#111111] border-b border-r border-[#555555] rounded-xl p-3 h-full w-full"
         placeholder="Type a message..."
       ></input>
       <button
-        className="bg-[#111111] border-b border-r border-[#555555] rounded-xl p-3 w-15 h-full flex items-center justify-center
+        className="bg-[#111111] border-b border-r border-[#555555] rounded-xl p-3 min-w-15 h-full flex items-center justify-center
       hover:bg-[#333333] hover:cursor-pointer transition-all duration-100"
       >
         <svg
@@ -31,7 +53,7 @@ export default function MessageBox() {
         </svg>
       </button>
       <button
-        className="bg-[#111111] border-b border-r border-[#555555] rounded-xl p-3 w-15 h-full flex items-center justify-center
+        className="bg-[#111111] border-b border-r border-[#555555] rounded-xl p-3 min-w-15 h-full flex items-center justify-center
       hover:bg-[#333333] hover:cursor-pointer transition-all duration-100"
       >
         <svg

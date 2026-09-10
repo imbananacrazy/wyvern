@@ -1,12 +1,18 @@
+"use client";
+
+import { useState } from "react";
 import MessageBox from "../components/message-box";
+import ServerList from "../components/server-list";
+import SettingsMenu from "../components/settings-menu";
 import Sidebar from "../components/sidebar";
 
 export default function Chat() {
+  const [settingsMenuEnabled, setSettingsMenuEnabled] = useState(false);
   return (
-    <div className="flex h-screen w-screen bg-[#222222]">
-      <div className="flex flex-row right-3 top-3 h-15 left-85 fixed bg-[#111111] border-r border-b border-[#555555] rounded-t-xl items-center">
-        <h1 className="text-lg font-bold select-none w-full p-5">
-          Text Channel
+    <div className="flex h-screen w-screen bg-[#222222] text-white">
+      <div className="flex flex-row right-3 top-3 h-13 left-100 fixed bg-[#111111] border-r border-b border-[#555555] rounded-t-xl items-center">
+        <h1 className="text-lg font-bold select-none w-full p-5 truncate">
+          Server/Friend Name | Text Channel Name
         </h1>
         <div className="flex flex-row justify-end w-full p-2">
           <button
@@ -31,9 +37,13 @@ export default function Chat() {
           </button>
         </div>
       </div>
-      <div className="flex flex-col right-3 top-18 bottom-20 left-85 fixed bg-[#111111] border-b border-r border-[#555555] rounded-b-xl"></div>
+      <div className="flex flex-col right-3 top-16 bottom-20 left-100 fixed bg-[#111111] border-b border-r border-[#555555] rounded-b-xl"></div>
       <MessageBox />
-      <Sidebar />
+      <Sidebar settingsButtonClicked={() => setSettingsMenuEnabled(true)} />
+      <ServerList />
+      {settingsMenuEnabled && (
+        <SettingsMenu onClose={() => setSettingsMenuEnabled(false)} />
+      )}
     </div>
   );
 }

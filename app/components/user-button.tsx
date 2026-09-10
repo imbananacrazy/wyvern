@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function UserButton() {
   return (
     <div
-      className="flex flex-row w-full h-12 rounded-lg border hover:cursor-pointer transition-all 
-    duration-100 hover:bg-[#333333] border-[#555555] items-center p-2 gap-2"
+      className="flex flex-row w-full h-15 rounded-lg border hover:cursor-pointer transition-all 
+    duration-100 hover:bg-[#333333] border-[#555555] items-center p-4 gap-2 text-white"
     >
       <div className="h-8 w-8 rounded-full border border-[#555555] justify-center items-center flex overflow-hidden select-none">
         <Image
@@ -16,7 +16,9 @@ export default function UserButton() {
           unoptimized
         />
       </div>
-      <h1 className="text-lg font-medium select-none">Display name</h1>
+      <h1 className="h-full flex items-center text-lg font-medium select-none">
+        Display name
+      </h1>
       <div className="h-3 w-3 rounded-full bg-green-500 border border-[#555555] ml-auto mr-2" />
     </div>
   );
